@@ -1,0 +1,10 @@
+<h3> update product dtails here</h3>
+<a href="{% url 'delete' id%}">Delete product</a>
+<form action="{% url 'edit' %}" method="post">
+   {% csrf_token %}
+<input type="hidden" value="{{id}}" name="id">
+    <table>
+        {{pform}}
+    </table>
+    <input type="submit" value="save">
+</form>

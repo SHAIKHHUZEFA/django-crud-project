@@ -1,0 +1,9 @@
+<h1> all product details</h1>
+{% for pro in products %}
+<a href="{% url 'update' pro.id %}">{{pro.pname}}</a>
+<br><br>
+{% endfor %}
+<form action="{% url 'create' %}">
+    {% csrf_token %}
+    <input type="submit" value="add new product">
+</form>
